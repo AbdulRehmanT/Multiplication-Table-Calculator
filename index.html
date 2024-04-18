@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Multiplication Table Calculator</h1>
+    <div class="main" >
+        <div id="tableInput" class="part-one">
+            <label for="">
+                <input type="number" id="multiplier" placeholder="Enter Number" required>
+                <button type="submit" onclick="generate()">Submit</button>
+                <button type="button" onclick="clearTable()">Clear</button>
+            </label>
+        </div>
+
+        <div id="tableResult" class="result">
+            <h2></h2>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
