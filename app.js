@@ -1,28 +1,26 @@
 function generate() {
-  const multiplierInput = document.getElementById("multiplier");
-  const multiplier = multiplierInput.value;
-  let multiply = Number(multiplier);
+  let multiply = document.getElementById("multiplier").value;
+  multiply = Number(multiply);
 
-  const tableResult = document.getElementById("tableResult");
-  const resultHeading = document.createElement("h2"); // Create h2 element
-  resultHeading.textContent = `Multiplication Table of ${multiply}`;
+  let tableResult = document.getElementById("tableResult");
   tableResult.innerHTML = "";
+
+  const resultHeading = document.createElement("h2");
+  resultHeading.textContent = `Multiplication Table of ${multiply}`;
   tableResult.appendChild(resultHeading);
 
-  if (multiplier > -1) {
+  if (multiply > -1) {
     for (let i = 1; i <= 10; i++) {
-      const para = document.createElement("p");
-             
-      para.textContent = `${multiply} X ${i} = ${multiply * i}`;
-      tableResult.appendChild(para);
+      const multiplyResult = document.createElement("p");
+      multiplyResult.textContent = `${multiply} x ${i} = ${multiply * i}`;
+      tableResult.appendChild(multiplyResult);
     }
-  }
-  else{
-    alert('Enter positive no:')
+  } else {
+    alert("Invalid Number! Please Enter Positive Number.");
   }
 }
 
 function clearTable() {
-    const tableResult = document.getElementById("tableResult");
-    tableResult.innerHTML = "";
+  const tableResult = document.getElementById("tableResult");
+  tableResult.innerHTML = "";
 }
