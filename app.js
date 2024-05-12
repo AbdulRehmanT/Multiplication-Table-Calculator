@@ -24,3 +24,19 @@ function clearTable() {
   const tableResult = document.getElementById("tableResult");
   tableResult.innerHTML = "";
 }
+
+
+//Event Listener by pressing keys
+document.getElementById("multiplier").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+      event.preventDefault(); // Prevent form submission
+      generate();
+  }
+});
+
+// Event listener for Esc key press
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+      clearTable();
+  }
+});

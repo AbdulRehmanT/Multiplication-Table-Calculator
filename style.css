@@ -49,3 +49,18 @@ h2 {
 p {
     padding: 5px !important;
 } 
+
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+}
